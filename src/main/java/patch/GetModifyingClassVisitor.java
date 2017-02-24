@@ -20,9 +20,9 @@ class GetModifyingClassVisitor extends ClassVisitor {
             new Method("get", STRING_TYPE, new Type[]{STRING_TYPE, STRING_TYPE})
     };
     private static final Method EQUALS_METHOD = new Method("equals", Type.BOOLEAN_TYPE, new Type[]{Type.getType(Object.class)});
-    private final Iterable<Patch> rewrites;
+    private final Patch[] rewrites;
 
-    GetModifyingClassVisitor(final int api, final ClassVisitor cv, final Iterable<Patch> rewrites) {
+    GetModifyingClassVisitor(final int api, final ClassVisitor cv, final Patch[] rewrites) {
         super(api, cv);
         this.rewrites = rewrites;
     }

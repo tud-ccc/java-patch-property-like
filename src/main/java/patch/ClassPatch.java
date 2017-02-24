@@ -5,9 +5,9 @@ package patch;
  */
 public final class ClassPatch {
     public final Class targetClass;
-    public final Iterable<Patch> patchesToApply;
+    public final Patch[] patchesToApply;
 
-    public ClassPatch(Class targetClass, Iterable<Patch> patchesToApply) {
+    public ClassPatch(final Class targetClass, final Patch[] patchesToApply) {
         this.targetClass = targetClass;
         this.patchesToApply = patchesToApply;
     }
